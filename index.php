@@ -148,7 +148,7 @@
                             <div class="hover_text">
                                 <div class="single-home-blog">
                                     <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i> <?php the_category("Sem categoria");?></a>
-                                    <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
+                                    <a class="time"> <i class="ti-time"></i><?php echo get_the_time( date("d/m/Y") );?></a>
                                     <a href="<?php the_permalink();?>">
                                         <h5 class="card-title"><?php the_title();?></h5>
                                     </a>
@@ -169,7 +169,7 @@
                             <div class="hover_text">
                                 <div class="single-home-blog">
                                     <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i> <?php the_category("Sem categoria");?></a>
-                                    <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
+                                    <a class="time"> <i class="ti-time"></i> <?php echo get_the_time( date("d/m/Y") );?></a>
                                     <a href="<?php the_permalink();?>">
                                         <h5 class="card-title"><?php the_title();?></h5>
                                     </a>
@@ -193,7 +193,7 @@
                             <div class="hover_text">
                                 <div class="single-home-blog">
                                     <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i><?php the_category("Sem categoria");?></a>
-                                    <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
+                                    <a class="time"> <i class="ti-time"></i> <?php echo get_the_time( date("d/m/Y") );?></a>
                                     <a href="<?php the_permalink()?>">
                                         <h5 class="card-title"><?php the_title();?></h5>
                                     </a>

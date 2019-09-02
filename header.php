@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -45,7 +45,7 @@
                         <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php bloginfo('url')?>/index.php">Inicio</a>
+                                    <a class="nav-link" href="<?php bloginfo('url');?>">Inicio</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="">Sobre Nos</a>
