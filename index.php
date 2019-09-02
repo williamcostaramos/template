@@ -6,13 +6,11 @@
                 <div class="col-lg-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h1>Finest And <br>
-                                Strongest Law <br>
-                                Firm Win The World</h1>
+                            <h1><?php the_title();?></h1>
                             <p>Subdue which man creeping was image you dry lesser every live our be gree male
                                 may living beginning appear moveth beast </p>
                             <div class="banner_btn">
-                                <a href="#" class="btn_1">Saiba Mais</a>
+                                <a href="<?php the_permalink();?>" class="btn_1">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -138,8 +136,7 @@
                 <div class="col-lg-7 col-sm-10">
                     <div class="section_tittle">
                         <h2>Ultimas do Blog</h2>
-                        <p>Over their the abundantly every midst place thing them them winged you're beginning
-                            forth you fruit seas very does can after herb moved so was kind </p>
+                        <p>Fique por dentro de todas as novidades do nosso blog </p>
                     </div>
                 </div>
             </div>
@@ -150,16 +147,12 @@
                             <img src="<?php bloginfo('template_url')?>/img/blog/blog_1.png" alt="offer_img_1">
                             <div class="hover_text">
                                 <div class="single-home-blog">
-                                    <a href="blog.html"> <i class="ti-bookmark"></i> Finance</a>
+                                    <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i> <?php the_category("Sem categoria");?></a>
                                     <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
-                                    <a href="blog.html">
-                                        <h5 class="card-title">Day to fill you greater together
-                                            life open set seed</h5>
+                                    <a href="<?php the_permalink();?>">
+                                        <h5 class="card-title"><?php the_title();?></h5>
                                     </a>
-                                    <p>Created images moving living fowl earth freed two hath first you
-                                        does you life above living a Give and earth light appear moved
-                                        behold go day seasons it made you more so fifty tosand on board
-                                        of the ready </p>
+                                    <p>Content Text</p>
                                     <ul>
                                         <li> <span class="ti-heart"></span>0 Like</li>
                                         <li> <span class="ti-comments"></span>2 Comments</li>
@@ -175,11 +168,10 @@
                             <img src="<?php bloginfo('template_url')?>/img/blog/blog_2.png" alt="offer_img_1">
                             <div class="hover_text">
                                 <div class="single-home-blog">
-                                    <a href="blog.html"> <i class="ti-bookmark"></i> Finance</a>
+                                    <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i> <?php the_category("Sem categoria");?></a>
                                     <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
-                                    <a href="blog.html">
-                                        <h5 class="card-title">Day to fill you greater together
-                                            life open set seed</h5>
+                                    <a href="<?php the_permalink();?>">
+                                        <h5 class="card-title"><?php the_title();?></h5>
                                     </a>
                                     <p>Created images moving living fowl earth freed two hath first you
                                         does you life above living a Give and earth light appear moved
@@ -200,11 +192,10 @@
                             <img src="<?php bloginfo('template_url')?>/img/blog/blog_3.png" alt="offer_img_1">
                             <div class="hover_text">
                                 <div class="single-home-blog">
-                                    <a href="blog.html"> <i class="ti-bookmark"></i> Finance</a>
+                                    <a href="<?php the_permalink();?>"> <i class="ti-bookmark"></i><?php the_category("Sem categoria");?></a>
                                     <a class="time"> <i class="ti-time"></i> March 30, 2019</a>
-                                    <a href="blog.html">
-                                        <h5 class="card-title">Day to fill you greater together
-                                            life open set seed</h5>
+                                    <a href="<?php the_permalink()?>">
+                                        <h5 class="card-title"><?php the_title();?></h5>
                                     </a>
                                     <p>Created images moving living fowl earth freed two hath first you
                                         does you life above living a Give and earth light appear moved

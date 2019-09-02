@@ -51,7 +51,7 @@
                                     <a class="nav-link" href="">Sobre Nos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php bloginfo('url')?>/blog.php">Blog</a>
+                                    <a class="nav-link" href="<?php bloginfo('url')?>/category.php">Blog</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php bloginfo('url')?>/service.php">Areas de Atuação</a>
@@ -62,7 +62,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block menu_btn">Fazer Login</a>
+                        <a href="https://personalizejuridico.com.br/dejure/" class="d-none d-sm-block menu_btn">Fazer Login</a>
                     </nav>
                 </div>
             </div>

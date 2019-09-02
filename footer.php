@@ -35,7 +35,7 @@
                         <ul>
                             <li><a href="#"><i class="ti-mobile"></i>(63) 3215-5293</a></li>
                             <li><a href="mailto:ariclaw@law.com"><i class="ti-email"></i>seuemail.com.br</a></li>
-                            <li><a href="#"><i class="ti-world"></i> seusite.com.br</a></li>
+                            <li><a href="#"><i class="ti-world"></i> <?php bloginfo('url');?></a></li>
                         </ul>
                     </div>
                 </div>
