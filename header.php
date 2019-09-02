@@ -48,10 +48,13 @@
                                     <a class="nav-link" href="<?php bloginfo('url')?>/index.php">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php bloginfo('url')?>/about.php">Sobre Nos</a>
+                                    <a class="nav-link" href="">Sobre Nos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php bloginfo('url')?>/service.html">Serviços</a>
+                                    <a class="nav-link" href="<?php bloginfo('url')?>/blog.php">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php bloginfo('url')?>/service.php">Areas de Atuação</a>
                                 </li>                              
                                 </li>
                                 <li class="nav-item">
