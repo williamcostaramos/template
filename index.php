@@ -12,7 +12,7 @@
                             <p>Subdue which man creeping was image you dry lesser every live our be gree male
                                 may living beginning appear moveth beast </p>
                             <div class="banner_btn">
-                                <a href="#" class="btn_1">More About Us</a>
+                                <a href="#" class="btn_1">Saiba Mais</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <div class="single_service_text">
                             <span class="flaticon-law"></span>
                             <h2>Assessoria Civil</h2>
-                            <p>Over their the abund every placed thing them them winged you beginning forth</p>
+                            <p> Elaboração e revisão de contratos civil, Renegociação de contratos, Assessoria para a constituição Alteração e dissolução de sociedades empresárias e não empresárias Fundações Associações Cooperativas</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <div class="single_service_text">
                             <span class="flaticon-scale"></span>
                             <h2>Assessoria Trabalhista</h2>
-                            <p>Over their the abund every placed thing them them winged you beginning forth</p>
+                            <p>Nosso escritório atua, perante a Justiça do Trabalho de 1ª instância, na defesa trabalhista de seus clientes, bem como perante os diversos Tribunais Regionais do Trabalho, com a elaboração de recursos trabalhistas.</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <div class="single_service_text">
                             <span class="flaticon-siren"></span>
                             <h2>Assessoria tributaria</h2>
-                            <p>Over their the abund every placed thing them them winged you beginning forth</p>
+                            <p>Mediante consultoria e planejamento tributários, são repassadas orientações de procedimentos e operações que otimizem a utilização dos instrumentos legais disponíveis, de forma a minimizar os impactos da carga fiscal referente aos tributos federais, estaduais e municipais.</p>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                         <div class="single_service_text">
                             <span class="flaticon-policeman"></span>
                             <h2>Assessoria de Conciliação e arbitragem</h2>
-                            <p>Over their the abund every placed thing them them winged you beginning forth</p>
+                            <p> Instituto de Conciliação, Mediação e Arbitragem é uma instituição privada, tendo iniciado suas atividades em 2013, busca a prevenção, avaliação, administração e resolução de conflitos, bem como a pacificação</p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                     <div class="single_service_part">
                         <div class="single_service_text">
                             <span class="flaticon-policeman"></span>
-                            <h2>Assessoria de Conciliação e arbitragem</h2>
+                            <h2>Assessoria previdenciaria</h2>
                             <p>Over their the abund every placed thing them them winged you beginning forth</p>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                     <div class="single_service_part">
                         <div class="single_service_text">
                             <span class="flaticon-policeman"></span>
-                            <h2>Assessoria de Conciliação e arbitragem</h2>
+                            <h2>Assessoria eleitoral</h2>
                             <p>Over their the abund every placed thing them them winged you beginning forth</p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                     <div class="single_service_part">
                         <div class="single_service_text">
                             <span class="flaticon-policeman"></span>
-                            <h2>Assessoria de Conciliação e arbitragem</h2>
+                            <h2>Assessoria Penal</h2>
                             <p>Over their the abund every placed thing them them winged you beginning forth</p>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                     <div class="single_service_part">
                         <div class="single_service_text">
                             <span class="flaticon-policeman"></span>
-                            <h2>Assessoria de Conciliação e arbitragem</h2>
+                            <h2>Assessoria Constitucional</h2>
                             <p>Over their the abund every placed thing them them winged you beginning forth</p>
                         </div>
                     </div>

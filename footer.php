@@ -34,42 +34,12 @@
                         <p>Q. 104 Norte Rua NE 5, 38 - Plano Diretor Norte, Palmas, TO</p>
                         <ul>
                             <li><a href="#"><i class="ti-mobile"></i>(63) 3215-5293</a></li>
-                            <li><a href="mailto:ariclaw@law.com"><i class="ti-email"></i>ariclaw@law.com</a></li>
-                            <li><a href="#"><i class="ti-world"></i> ariclawyerfirm.com</a></li>
+                            <li><a href="mailto:ariclaw@law.com"><i class="ti-email"></i>seuemail.com.br</a></li>
+                            <li><a href="#"><i class="ti-world"></i> seusite.com.br</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="single-footer-widget footer_3">
-                        <h4>Instagram</h4>
-                        <div class="footer_img">
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/img/footer_img/footer_img_1.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/img/footer_img/footer_img_2.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/footer_img/footer_img_3.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/img/footer_img/footer_img_4.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/img/footer_img/footer_img_5.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                            <div class="single_footer_img">
-                                <img src="<?php bloginfo('template_url')?>/img/footer_img/footer_img_6.png" alt="">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
         </div>

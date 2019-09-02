@@ -62,7 +62,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <a href="#" class="d-none d-sm-block menu_btn">Vamos Conversar</a>
+                        <a href="#" class="d-none d-sm-block menu_btn">Fazer Login</a>
                     </nav>
                 </div>
             </div>
