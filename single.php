@@ -30,7 +30,7 @@
                   <div class="blog_details">
                      <h2><?php the_title();?></h2>
                      <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
+                        <li><a href="#"><i class="far fa-user"></i></a></li>
                         <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
                      </ul>
                      <p class="excert">

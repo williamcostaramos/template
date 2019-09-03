@@ -25,12 +25,51 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-5 mb-lg-0">
+              
                     <div class="blog_left_sidebar">
+
+                
                         <article class="blog_item">
+
+                        <?php $data= query_posts( 'cat=direito+civil&orderby=title' ) ?>
+
+                        
+                        <?php if(have_posts()):?>
+                        <?php while(have_posts()): the_post();?>
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="<?php bloginfo('template_url');?>/img/blog/single_blog_1.png" alt="">
+                                <img class="card-img rounded-0" src="<?php bloginfo('template_url')?>/img/post/post_5.png">
+                                <a href="<?php the_permalink();?>" class="blog_item_date">
+                                    <h3><?php echo get_the_time( date("d") );?></h3>
+                                    <p><?php echo get_the_time( date("m") );?></p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="<?php the_permalink();?>">
+                                    <h2><?php the_title();?></h2>
+                                </a>
+                                <p><?php the_content();?></p>
+                                <ul class="blog-info-link">
+                                    <li><a href="<?php the_permalink();?>"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
+                                    <li><a href="#"><i class="far fa-comments"></i><?php echo get_the_time( date("d/m/Y") );?></a></li>
+                                </ul>                            
+                            </div>
+
+                            <?php endwhile;?>
+                            <?php endif;?>
+
+
+                        </article>
+
+                        <article class="blog_item">
+
+                        <?php (query_posts( 'cat=direito+penal&orderby=title' ));?>
+                        <?php if(have_posts()):?>
+                        <?php while(have_posts()): the_post();?>
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="" alt="">
                                 <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
+                                    <h3></h3>
                                     <p>Jan</p>
                                 </a>
                             </div>
@@ -39,104 +78,16 @@
                                 <a class="d-inline-block" href="<?php the_permalink();?>">
                                     <h2><?php the_title();?></h2>
                                 </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-
-                            
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <p><?php the_content();?></p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
                                     <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
                                 </ul>
                             </div>
+                            <?php endwhile;?>
+                            <?php endif;?>
                         </article>
 
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_3.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_4.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_5.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="single-blog.html">
-                                    <h2>Google inks pact for new 35-storey office</h2>
-                                </a>
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
 
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
@@ -221,42 +172,23 @@
 
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Post Recentes</h3>
+
+                        <?php (query_posts( 'cat=direito+civil&orderby=DESC' ));?>
+                        <?php if(have_posts()):?>
+                        <?php while(have_posts()): the_post();?>
+
                             <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
+                                <img src="<?php bloginfo('template_url');?>/img/post/post_1.png" alt="post">
                                 <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
+                                    <a href="<?php the_permalink();?>">
+                                        <h3><?php the_title();?></h3>
                                     </a>
-                                    <p>January 12, 2019</p>
+                                    <p><?php echo get_the_time( date("d/m") );?></p>
                                 </div>
                             </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            <?php endwhile;?>
+                            <?php endif;?> 
+                         
                         </aside>
                         <aside class="single_sidebar_widget tag_cloud_widget">
                             <h4 class="widget_title">Tags</h4>

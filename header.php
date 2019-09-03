@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ariclaw</title>
+    <title><?php bloginfo('name');?> | <?php bloginfo('description');?></title>
     <link rel="icon" href="<?php bloginfo('template_url')?>/img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css">

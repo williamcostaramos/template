@@ -7,12 +7,11 @@
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1><?php the_title();?></h1>
-                            <p>Subdue which man creeping was image you dry lesser every live our be gree male
-                                may living beginning appear moveth beast </p>
+                            <p> Description of post</p>
                             <div class="banner_btn">
                                 <a href="<?php the_permalink();?>" class="btn_1">Saiba Mais</a>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
