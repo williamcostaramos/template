@@ -37,7 +37,7 @@
                         <?php if(have_posts()):?>
                         <?php while(have_posts()): the_post();?>
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="<?php bloginfo('template_url')?>/img/post/post_5.png">
+                            <?php the_post_thumbnail();?>
                                 <a href="<?php the_permalink();?>" class="blog_item_date">
                                     <h3><?php echo get_the_time( date("d") );?></h3>
                                     <p><?php echo get_the_time( date("m") );?></p>
@@ -67,7 +67,7 @@
                         <?php if(have_posts()):?>
                         <?php while(have_posts()): the_post();?>
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="" alt="">
+                            <?php the_post_thumbnail();?>
                                 <a href="#" class="blog_item_date">
                                     <h3></h3>
                                     <p>Jan</p>
@@ -80,8 +80,8 @@
                                 </a>
                                 <p><?php the_content();?></p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
+                                    <li><a href="#"><i class="far fa-comments"></i> <?php echo get_the_time( date("d/m/Y") );?></a></li>
                                 </ul>
                             </div>
                             <?php endwhile;?>
@@ -131,6 +131,7 @@
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Categorias</h4>
                             <ul class="list cat-list">
+                            
                                 <li>
                                     <a href="#" class="d-flex">
                                         <p>Resaurant food</p>
@@ -178,7 +179,7 @@
                         <?php while(have_posts()): the_post();?>
 
                             <div class="media post_item">
-                                <img src="<?php bloginfo('template_url');?>/img/post/post_1.png" alt="post">
+                                <?php the_post_thumbnail();?>
                                 <div class="media-body">
                                     <a href="<?php the_permalink();?>">
                                         <h3><?php the_title();?></h3>

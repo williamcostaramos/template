@@ -1,4 +1,5 @@
 <?php get_header();?>
-<h2>pagina 404 </h2>
-<?php the_post_thumbnail();?>
+
+<h1>Pagina que voce solicitou nao foi encontrada</h1>
+
 <?php get_footer();?>

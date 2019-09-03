@@ -25,7 +25,7 @@
             <div class="col-lg-8 posts-list">
                <div class="single-post">
                   <div class="feature-img">
-                     <img class="img-fluid" src="img/blog/single_blog_1.png" alt="">
+                     <img class="img-fluid" src="<?php bloginfo('template_url');?>img/blog/single_blog_1.png" alt="">
                   </div>
                   <div class="blog_details">
                      <h2><?php the_title();?></h2>

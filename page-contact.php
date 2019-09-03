@@ -18,7 +18,7 @@
   </section>
   <!-- breadcrumb start-->
 
-  <section class="contact-section section_padding cta_area">
+  <section class="contact-section section_padding ">
     <div class="container">
     <div class="section_tittle">
                         <h2>Entre em contato</h2>

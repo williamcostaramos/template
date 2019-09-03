@@ -1352,6 +1352,10 @@ ul {
 .blog_item_img {
   position: relative;
 }
+.blog_item_img img{
+  max-height: 350px;
+  
+}
 
 /* line 599, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_blog.scss */
 .blog_item_img .blog_item_date {
@@ -1551,6 +1555,11 @@ ul {
   transition: all 0.3s linear;
 }
 
+.post_item img{
+  border-radius:50%;
+  width: 50px;
+  max-height: 50px;
+}
 /* line 803, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_blog.scss */
 .blog_right_sidebar .popular_post_widget .post_item .media-body a:hover {
   color: #ab7636;
@@ -1566,6 +1575,10 @@ ul {
 /* line 816, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_blog.scss */
 .blog_right_sidebar .popular_post_widget .post_item + .post_item {
   margin-top: 20px;
+}
+.post_item img{
+  max-width: 350px;
+  
 }
 
 /* line 824, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_blog.scss */
