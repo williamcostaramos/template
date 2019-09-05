@@ -30,55 +30,21 @@
                 </div>
             </div>
             <div class="row justify-content-between">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_single_service">
-                        <img src="<?php bloginfo('template_url');?>/img/icon/service_1.svg" alt="#">
-                        <h4>Bancos & Finanças</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
-                    </div>
-                </div>
+
+                <?php query_posts(['post_type'=> 'post_atuacao']);?>
+                    <?php if(have_posts()):;?>
+                    <?php while(have_posts()): the_post();?>
                 <div class="col-lg-4 col-sm-6">
                     <div class="single_single_service">
                         <img src="<?php bloginfo('template_url');?>/img/icon/service_2.svg" alt="#">
-                        <h4>Direito Familiar</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
+                        <h4><?php the_title();?></h4>
+                        <p><?php the_content();?></p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_single_service">
-                        <img src="<?php bloginfo('template_url');?>/img/icon/service_3.svg" alt="#">
-                        <h4>Direito dos Seguros</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_single_service">
-                        <img src="<?php bloginfo('template_url');?>/img/icon/service_4.svg" alt="#">
-                        <h4>Direito Economico</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_single_service">
-                        <img src="<?php bloginfo('template_url');?>/img/icon/service_5.svg" alt="#">
-                        <h4>Direito Criminal</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_single_service">
-                        <img src="<?php bloginfo('template_url');?>/img/icon/service_6.svg" alt="#">
-                        <h4>Direito Civil</h4>
-                        <p>After creeping two life sea green which face yielding gat ered was after
-                            also upon blessed under whose abdantly one very to let his</p>
-                    </div>
-                </div>
-            </div>
+
+                <?php endwhile;?>
+                
+                <?php endif;?>
         </div>
     </section>
     <!-- servicing end-->

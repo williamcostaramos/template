@@ -3,20 +3,15 @@
     <section class="banner_part">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                <?php query_posts(['category_name' => "destaque", "posts_per_page" => 1]);?>
-                <?php if(have_posts()):;?>
-                  <?php while(have_posts()): the_post();?>
+                <div class="col-lg-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1><?php the_title();?></h1>
-                            <p><?php echo limit_word(the_content(), 50)?></p>
+                            <p>Pagina de Categoria</p>
                             <div class="banner_btn">
                                 <a href="<?php the_permalink();?>" class="btn_1">Saiba Mais</a>
                             </div>
-                        </div> 
-                  <?php endwhile;?>                        
-                  <?php endif;?> 
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -29,9 +24,6 @@
     <!-- about part end-->
 
     <!-- Service part start-->
-
-    
-
     <section class="service_part section_padding bg-marrom">
         <div class="container">
             <div class="row align-items-center">

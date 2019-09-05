@@ -29,68 +29,43 @@
                     <div class="blog_left_sidebar">
 
                 
-                        <article class="blog_item">
+                        <article class="blog_item">                       
+                            <?php if(have_posts()):?>
+                            
+                            <?php query_posts([ 'posts_per_page' => 6, 'orderby'=> 'title']);?>
+                            
+                            <?php while(have_posts()): the_post();?>
 
-                        <?php $data= query_posts( 'cat=direito+civil&orderby=title' ) ?>
+                            
+                                <div class="blog_item_img">
+                                <?php the_post_thumbnail();?>
+                                    <a href="<?php the_permalink();?>" class="blog_item_date">
+                                        <h3><?php echo date("d") ;?></h3>
+                                        <p><?php echo  date("M",strtotime(get_the_time()))?></p>
+                                    </a>
+                                </div>
 
-                        
-                        <?php if(have_posts()):?>
-                        <?php while(have_posts()): the_post();?>
-                            <div class="blog_item_img">
-                            <?php the_post_thumbnail();?>
-                                <a href="<?php the_permalink();?>" class="blog_item_date">
-                                    <h3><?php echo get_the_time( date("d") );?></h3>
-                                    <p><?php echo get_the_time( date("m") );?></p>
-                                </a>
-                            </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="<?php the_permalink();?>">
+                                        <h2><?php the_title();?></h2>
+                                    </a>
+                                    <p><?php the_content();?></p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="<?php the_permalink();?>"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
+                                        <li></i><?php echo get_the_time( date("d/m/Y") );?></li>
+                                    </ul>                            
+                                </div>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="<?php the_permalink();?>">
-                                    <h2><?php the_title();?></h2>
-                                </a>
-                                <p><?php the_content();?></p>
-                                <ul class="blog-info-link">
-                                    <li><a href="<?php the_permalink();?>"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i><?php echo get_the_time( date("d/m/Y") );?></a></li>
-                                </ul>                            
-                            </div>
-
-                            <?php endwhile;?>
-                            <?php endif;?>
+                                <?php endwhile;?>
+                                <?php endif;?>
 
 
                         </article>
 
-                        <article class="blog_item">
-
-                        <?php (query_posts( 'cat=direito+penal&orderby=title' ));?>
-                        <?php if(have_posts()):?>
-                        <?php while(have_posts()): the_post();?>
-                            <div class="blog_item_img">
-                            <?php the_post_thumbnail();?>
-                                <a href="#" class="blog_item_date">
-                                    <h3></h3>
-                                    <p>Jan</p>
-                                </a>
-                            </div>
-
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="<?php the_permalink();?>">
-                                    <h2><?php the_title();?></h2>
-                                </a>
-                                <p><?php the_content();?></p>
-                                <ul class="blog-info-link">
-                                    <li><a href="#"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
-                                    <li><a href="#"><i class="far fa-comments"></i> <?php echo get_the_time( date("d/m/Y") );?></a></li>
-                                </ul>
-                            </div>
-                            <?php endwhile;?>
-                            <?php endif;?>
-                        </article>
-
-
+                     
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
+                           
                                 <li class="page-item">
                                     <a href="#" class="page-link" aria-label="Previous">
                                         <i class="ti-angle-left"></i>
@@ -130,98 +105,51 @@
 
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Categorias</h4>
-                            <ul class="list cat-list">
+
+
+                           <?php $args=array(
+                                    'orderby' => 'name',
+                                    'order' => 'ASC'
+                                    );
+                                    $categories=get_categories($args);
+                            ?>
+                            <?php if($categories):?>
+
                             
+                            <ul class="list cat-list">
+                                <?php foreach($categories as $categoria):?>  
+                                
+                                
                                 <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Resaurant food</p>
-                                        <p>(37)</p>
+                                    <a href="<?php echo get_category_link( $categoria->term_id );?>" class="d-flex">
+                                        <p> <?php  echo $categoria->name ;?> &nbsp</p>
+                                        <p> (<?php  echo $categoria->count ;?>)</p>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Travel news</p>
-                                        <p>(10)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Modern technology</p>
-                                        <p>(03)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Product</p>
-                                        <p>(11)</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Inspiration</p>
-                                        <p>21</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Health Care (21)</p>
-                                        <p>09</p>
-                                    </a>
-                                </li>
+                                <?php endforeach;?>
+                                <?php endif;?>
+
                             </ul>
                         </aside>
 
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Post Recentes</h3>
-
-                        <?php (query_posts( 'cat=direito+civil&orderby=DESC' ));?>
-                        <?php if(have_posts()):?>
-                        <?php while(have_posts()): the_post();?>
-
+                            <h3 class="widget_title">Posts Recentes</h3>
                             <div class="media post_item">
-                                <?php the_post_thumbnail();?>
+                                <?php query_posts(['posts_per_page'=> 5]);?>
+                                <?php if(have_posts()):?>
+                                <?php while(have_posts()): the_post();?>
                                 <div class="media-body">
                                     <a href="<?php the_permalink();?>">
-                                        <h3><?php the_title();?></h3>
+                                        <h3></h3>
                                     </a>
-                                    <p><?php echo get_the_time( date("d/m") );?></p>
+                                    <p><?php the_title();?></p>
                                 </div>
+                                <?php endwhile;?>
+                                <?php endif;?>
                             </div>
-                            <?php endwhile;?>
-                            <?php endif;?> 
+                           
                          
-                        </aside>
-                        <aside class="single_sidebar_widget tag_cloud_widget">
-                            <h4 class="widget_title">Tags</h4>
-                            <ul class="list">
-                                <li>
-                                    <a href="#">project</a>
-                                </li>
-                                <li>
-                                    <a href="#">love</a>
-                                </li>
-                                <li>
-                                    <a href="#">technology</a>
-                                </li>
-                                <li>
-                                    <a href="#">travel</a>
-                                </li>
-                                <li>
-                                    <a href="#">restaurant</a>
-                                </li>
-                                <li>
-                                    <a href="#">life style</a>
-                                </li>
-                                <li>
-                                    <a href="#">design</a>
-                                </li>
-                                <li>
-                                    <a href="#">illustration</a>
-                                </li>
-                            </ul>
-                        </aside>
-
-
+                        </aside>                        
                         <aside class="single_sidebar_widget newsletter_widget">
                             <h4 class="widget_title">Receba Novidades no seu E-mail</h4>
 
@@ -240,4 +168,4 @@
     </section>
     <!--================Blog Area =================-->
 
- <?php get_footer()?>
+ <?php get_footer();?>
