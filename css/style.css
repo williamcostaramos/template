@@ -2528,7 +2528,7 @@ ul {
   background-size: 46%;
   bottom: -74px;
   z-index: -1;
-  background: url(../img/banner_bg.png) top right no-repeat;
+  
 }
 
 @media (max-width: 575px) {
@@ -2574,6 +2574,10 @@ ul {
 .banner_part .banner_text .banner_text_iner {
   display: table-cell;
   vertical-align: middle;
+}
+.banner_text_iner h1{
+    font-size: 2.5em !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 575px) {
@@ -6596,3 +6600,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*pagina single*/

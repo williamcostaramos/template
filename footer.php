@@ -86,6 +86,8 @@ Copyright <?php bloginfo('name');?> &copy;<?php echo date('Y');?></script> Todos
     <script src="<?php bloginfo('template_url')?>/js/jquery.nice-select.min.js"></script>
     <!-- custom js -->
     <script src="<?php bloginfo('template_url')?>/js/custom.js"></script>
+    
+     <?php wp_footer(); ?> 
 </body>
 
 </html>

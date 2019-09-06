@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css">
     <!-- animate CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <!-- owl carousel CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/owl.carousel.min.css">
     <!-- themify CSS -->
@@ -26,6 +27,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>css/all.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/style.css">
+   <?php wp_head(); ?> 
 </head>
 
 <body>
