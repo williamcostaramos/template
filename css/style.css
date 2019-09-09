@@ -1152,6 +1152,9 @@ ul {
   transition: all 0.3s linear;
 }
 
+.details h4 a{
+    font-size: 1.2em;
+}
 /* line 403, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_blog.scss */
 .single-recent-blog-post .date {
   font-size: 14px;
@@ -6601,4 +6604,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /*# sourceMappingURL=style.css.map */
 
-/*pagina single*/
+/*paginação */
+
+ .wp-pagenavi {
+    padding:10px;
+}
+.wp-pagenavi .current{
+    margin: 0 10px;
+}
+
+.custom-logo-link > img{
+    max-width: 64px !important;
+    max-height: 64px !important;
+}

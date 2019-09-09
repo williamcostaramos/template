@@ -10,7 +10,7 @@
                         <div class="banner_text">
                             <div class="banner_text_iner">
                                 <h1><?php the_title(); ?></h1>
-                                <p><?php echo limit_words(get_the_content(), 50);?></p>
+                                <p><?php echo limit_words(get_the_content(), 50); ?></p>
                                 <div class="banner_btn">
                                     <a href="<?php the_permalink(); ?>" class="btn_1">Saiba Mais</a>
                                 </div>
@@ -148,7 +148,7 @@
             </div>
         </div>
         <div class="row">
-            <?php query_posts(['category_name' => "destaque"]); ?>
+            <?php query_posts(['category_name' => "destaque", 'posts_per_page' => 3]); ?>
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
                     <div class="col-lg-4 col-sm-6">
@@ -168,11 +168,8 @@
                                         <a href="<?php the_permalink(); ?>">
                                             <h5 class="card-title"><?php the_title(); ?></h5>
                                         </a>
-                                        <p><?php echo limit_words(get_the_content(), 20)?></p>
-                                        <ul>
-                                            <li> <span class="ti-heart"></span>0 visitas</li>
-                                            <li> <span class="ti-comments"></span>2 Comments</li>
-                                        </ul>
+                                        <p><?php echo limit_words(get_the_content(), 20) ?></p>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -180,6 +177,7 @@
                         </div>
                     </div> 
                 <?php endwhile; ?>
+
             <?php endif; ?>
         </div>
     </div>

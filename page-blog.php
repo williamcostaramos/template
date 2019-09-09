@@ -32,7 +32,7 @@
                     <article class="blog_item">                       
                         <?php if (have_posts()): ?>
 
-                            <?php query_posts([ 'posts_per_page' => 6, 'orderby' => 'title']); ?>
+                            <?php query_posts(['orderby' => 'title']); ?>
 
                             <?php while (have_posts()): the_post(); ?>
 
@@ -62,115 +62,22 @@
                                 </div>
 
                             <?php endwhile; ?>
+
+                            <?php wp_reset_query(); ?>
                         <?php endif; ?>
 
 
                     </article>
-
-
-                     <?php  pagination();?>
-                            
+<?php query_posts(['orderby' => 'title']); ?>
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
-                              
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Previous">
-                                    <i class="ti-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a href="#" class="page-link">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a href="#" class="page-link" aria-label="Next">
-                                    <i class="ti-angle-right"></i>
-                                </a>
-                            </li>
+                            <?php wp_pagenavi(); ?>                                                 
                         </ul>
                     </nav>
+
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="blog_right_sidebar">
-                    <aside class="single_sidebar_widget search_widget">
-                        <form action="#">
-                            <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Buscar'>
-                                    <div class="input-group-append">
-                                        <button class="btn" type="button"><i class="ti-search"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                                    type="submit">Pesquisar</button>
-                        </form>
-                    </aside>
-
-                    <aside class="single_sidebar_widget post_category_widget">
-                        <h4 class="widget_title">Categorias</h4>
-
-
-                        <?php
-                        $args = array(
-                            'orderby' => 'name',
-                            'order' => 'ASC'
-                        );
-                        $categories = get_categories($args);
-                        ?>
-                        <?php if ($categories): ?>
-
-
-                            <ul class="list cat-list">
-                                <?php foreach ($categories as $categoria): ?>  
-
-
-                                    <li>
-                                        <a href="<?php echo get_category_link($categoria->term_id); ?>" class="d-flex">
-                                            <p> <?php echo $categoria->name; ?> &nbsp</p>
-                                            <p> (<?php echo $categoria->count; ?>)</p>
-                                        </a>
-                                    </li>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-
-                        </ul>
-                    </aside>
-
-                    <aside class="single_sidebar_widget popular_post_widget">
-                        <h3 class="widget_title">Posts Recentes</h3>
-                        <div class="media post_item">
-                            <?php query_posts(['posts_per_page' => 5]); ?>
-                            <?php if (have_posts()): ?>
-                                <?php while (have_posts()): the_post(); ?>
-                                    <div class="media-body">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <h3></h3>
-                                        </a>
-                                        <p><?php the_title(); ?></p>
-                                    </div>
-                                <?php endwhile; ?>
-                            <?php endif; ?>
-                        </div>
-
-
-                    </aside>                        
-                    <aside class="single_sidebar_widget newsletter_widget">
-                        <h4 class="widget_title">Receba Novidades no seu E-mail</h4>
-
-                        <form action="#">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder='Informe seu Email' required>
-                            </div>
-                            <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                                    type="submit">Assinar</button>
-                        </form>
-                    </aside>
-                </div>
-            </div>
+        <?php get_sidebar(); ?>
         </div>
     </div>
 </section>
