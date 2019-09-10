@@ -61,10 +61,10 @@
                                         <a class="nav-link" href="<?php bloginfo('url') ?>/about">Sobre Nos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/blog">Blog</a>
+                                        <a class="nav-link" href="<?php bloginfo('url') ?>/blog">Publicações</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/service">Areas de Atuação</a>
+                                        <a class="nav-link" href="<?php bloginfo('url') ?>/service">Áreas de Atuação</a>
                                     </li>                              
                                     </li>
                                     <li class="nav-item">

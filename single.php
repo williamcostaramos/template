@@ -30,7 +30,7 @@
                                 <?php if (has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail('blog') ?>
                                 <?php else: ?>
-                                    <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/single_blog_2.png" alt="<?php the_title() ?>"/>                                          
+                                    <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/02.png" alt="<?php the_title() ?>"/>                                          
                                 <?php endif; ?>
                             </div>
                             <div class="blog_details">                 

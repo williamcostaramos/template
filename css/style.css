@@ -6594,8 +6594,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px !important;
 }
 
-.bg-marrom{
-  background-color:rgba(171,118,54,0.4);;
+.bg-marrom, .bg-marrom:hover{
+    transition: all 3s;
+  background-color:rgba(171,118,54,0.6);
+  color:#fff;
+  font-weight: bold;
 }
 
 .margin-10{
@@ -6617,3 +6620,35 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 64px !important;
     max-height: 64px !important;
 }
+
+
+/*bloco search*/
+
+#searchsubmit{
+    margin: 10px 0;
+    width: 100%;
+}
+
+
+/*search page*/
+
+
+.form-control{
+    border: 2px solid #9e9e9e !important;
+    color:#333;
+    border-radius: 3px;
+}
+
+.card{
+    margin: 25px 0;
+}
+.wrap{
+    margin-top: 100px;
+}
+
+.main-menu-item .nav-link{
+    text-transform: none !important;
+}
+
+
+

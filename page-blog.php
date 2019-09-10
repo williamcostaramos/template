@@ -41,11 +41,11 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('capablog') ?>
                                     <?php else: ?>
-                                        <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/single_blog_2.png" alt="<?php the_title() ?>"/> 
+                                        <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/02.png" alt="<?php the_title() ?>"/> 
                                     <?php endif; ?>
 
                                     <a href="<?php the_permalink(); ?>" class="blog_item_date">
-                                        <h3><?php echo date("d"); ?></h3>
+                                        <h3><?php echo get_the_time("d"); ?></h3>
                                         <p><?php echo date("M", strtotime(get_the_time())) ?></p>
                                     </a>
                                 </div>
@@ -63,21 +63,22 @@
 
                             <?php endwhile; ?>
 
-                            <?php wp_reset_query(); ?>
+                            <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
 
 
                     </article>
-<?php query_posts(['orderby' => 'title']); ?>
+                    <?php query_posts(['orderby' => 'title']); ?>
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
                             <?php wp_pagenavi(); ?>                                                 
                         </ul>
                     </nav>
 
+                    <?php wp_reset_postdata(); ?>
                 </div>
             </div>
-        <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </section>

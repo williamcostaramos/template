@@ -43,6 +43,7 @@ set_post_thumbnail_size(50, 50, true);
 add_image_size('single-post-thumbnail', 350, 450);
 add_image_size('artigo-blog', 700, 350);
 add_image_size('blog', 1200, 350);
+add_image_size('the_custom_logo',64,64);
 
 the_posts_pagination( array(
 	'mid_size'  => 2,
