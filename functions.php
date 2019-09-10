@@ -48,7 +48,7 @@ add_image_size('the_custom_logo',64,64);
 the_posts_pagination( array(
 	'mid_size'  => 2,
 	'prev_text' => __( 'Back', 'textdomain' ),
-	'next_text' => __( 'Onward', 'textdomain' ),
+	'next_text' => __( 'Onward', 'textdomain' ) ,
 ) );
 
 
