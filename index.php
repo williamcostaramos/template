@@ -1,20 +1,16 @@
 <?php get_header(); ?>
 <!-- banner part start-->
 
-<div class="container-fluid ">
-    <div class="row align-items-center">
-        <div class="col-md-12 container-fluid">
+<div class="container-fluid slide ">
+    <div class="row  ">
+        <div class="w-100  align-items-center">
 
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <?php $i = 1; ?>
-                <ol class="carousel-indicators">
-                    <li data-target="#<?php the_permalink(); ?>" data-slide-to="<?php echo $i ?>" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i ?>"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i ?>"></li>
-                </ol>
+            <div id="carrosel" class="carousel " data-ride="carousel">
+                
+               
                 <div class="carousel-inner">
 
-                    <?php query_posts(['category_name' => 'destaque', 'post_per_page' => 5]); ?>
+                    <?php  $i = 1; query_posts(['category_name' => 'destaque', 'post_per_page' => 5]); ?>
                     <?php
                     if (have_posts()):
                         ?>
@@ -24,13 +20,14 @@
                         echo 'active';
                     }
                             ?>">
-                                 <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
-                                <div class="carousel-caption d-none d-md-block">
+                                 <div class="carousel-caption d-none d-md-block">
                                     <a href="<?php the_permalink();?>" title="<?php the_title();?>"> 
                                         <h1><?php the_title(); ?></h1>
                                         <p><?php the_excerpt(); ?></p>
                                     </a>
                                 </div>
+                                 <?php the_post_thumbnail('blog', ['class' => 'img-fluid w-100']); ?>
+                               
                             </div>
                             <?php
                             $i++;
@@ -38,11 +35,11 @@
                         ?>
                     <?php endif; ?>
                 </div>
-                <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carrosel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carrosel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>

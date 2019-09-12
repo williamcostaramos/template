@@ -6652,7 +6652,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide{
-    margin:100px 0 20px 0;
+    margin-top:80px;
+    margin-bottom: 50px;
+    width: 100%;
     
 }
 
@@ -6660,10 +6662,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000;
 }
 
+.carrosel-inner{
+    margin-bottom: 100px;
+}
 
 .carousel-item img{
-    opacity: 0.4 !important;
-    
+    opacity: 0.3 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+height: 750px !important;
+
     
 }
 

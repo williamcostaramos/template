@@ -40,16 +40,8 @@ add_action('wp_head', 'add_meta_tags');
 
 set_post_thumbnail_size(50, 50, true);
 
-add_image_size('single-post-thumbnail', 350, 450);
-add_image_size('artigo-blog', 700, 350);
-add_image_size('blog', 1200, 350);
-add_image_size('the_custom_logo',64,64);
 
-the_posts_pagination( array(
-	'mid_size'  => 2,
-	'prev_text' => __( 'Back', 'textdomain' ),
-	'next_text' => __( 'Onward', 'textdomain' ) ,
-) );
+
 
 
 function themename_custom_logo_setup() {
@@ -64,4 +56,8 @@ function themename_custom_logo_setup() {
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 
+add_image_size('single-post-thumbnail', 350, 450,true);
+add_image_size('artigo-blog', 700, 300,true);
+add_image_size('blog', 1600, 720, true);
+add_image_size('the_custom_logo',64,64, true);
 
