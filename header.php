@@ -58,17 +58,17 @@
                                         <a class="nav-link" href="<?php bloginfo('url'); ?>">Inicio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/about">Sobre Nos</a>
+                                        <a class="nav-link" href="<?php bloginfo('url') ?>/sobre">Sobre Nos</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<?php bloginfo('url') ?>/blog">Publicações</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/service">Áreas de Atuação</a>
+                                        <a class="nav-link" href="<?php bloginfo('url') ?>/servico">Áreas de Atuação</a>
                                     </li>                              
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/contact">Contato</a>
+                                        <a class="nav-link" href="<?php bloginfo('url') ?>/contato">Contato</a>
                                     </li>
                                 </ul>
                             </div>

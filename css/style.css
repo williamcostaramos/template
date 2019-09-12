@@ -2256,6 +2256,7 @@ ul {
   top: 0;
   width: 100%;
   z-index: 999;
+  
 }
 
 /* line 45, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_menu.scss */
@@ -6650,5 +6651,35 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: none !important;
 }
 
+.slide{
+    margin:100px 0 20px 0;
+    
+}
+
+.carousel-item{
+  background-color: #000;
+}
+
+
+.carousel-item img{
+    opacity: 0.4 !important;
+    
+    
+}
+
+.carousel-caption {
+    margin-bottom: 25px; 
+}
+.carousel-caption h1{
+    font-size:3.4em ! important;
+    color:#fff !important;
+    font-family: 'Roboto'
+    
+    
+}
+.carousel-caption p{
+    color:#bbb;
+    font-size:1.5em;
+}
 
 

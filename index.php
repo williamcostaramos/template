@@ -1,27 +1,58 @@
 <?php get_header(); ?>
 <!-- banner part start-->
-<section class="banner_part align-items-center" >
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6">
-                <?php query_posts(['category_name' => "destaque", "posts_per_page" => 1]); ?>
-                <?php if (have_posts()):; ?>
-                    <?php while (have_posts()): the_post(); ?>
-                        <div class="banner_text">
-                            <div class="banner_text_iner">
-                                <h1><?php the_title(); ?></h1>
-                                <p><?php echo limit_words(get_the_content(), 50); ?></p>
-                                <div class="banner_btn">
-                                    <a href="<?php the_permalink(); ?>" class="btn_1">Saiba Mais</a>
+
+<div class="container-fluid ">
+    <div class="row align-items-center">
+        <div class="col-md-12 container-fluid">
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <?php $i = 1; ?>
+                <ol class="carousel-indicators">
+                    <li data-target="#<?php the_permalink(); ?>" data-slide-to="<?php echo $i ?>" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i ?>"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="<?php echo $i ?>"></li>
+                </ol>
+                <div class="carousel-inner">
+
+                    <?php query_posts(['category_name' => 'destaque', 'post_per_page' => 5]); ?>
+                    <?php
+                    if (have_posts()):
+                        ?>
+                        <?php while (have_posts()): the_post() ?>
+                            <div class="carousel-item <?php
+                    if ($i == 1) {
+                        echo 'active';
+                    }
+                            ?>">
+                                 <?php the_post_thumbnail('full', ['class' => 'img-fluid']); ?>
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="<?php the_permalink();?>" title="<?php the_title();?>"> 
+                                        <h1><?php the_title(); ?></h1>
+                                        <p><?php the_excerpt(); ?></p>
+                                    </a>
                                 </div>
-                            </div> 
-                        <?php endwhile; ?>                        
-                    <?php endif; ?> 
+                            </div>
+                            <?php
+                            $i++;
+                        endwhile;
+                        ?>
+                    <?php endif; ?>
                 </div>
+                <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
         </div>
     </div>
-</section>
+</div>
+</div>
+
 <!-- banner part start-->
 
 <!-- about part start-->
@@ -149,7 +180,7 @@
         </div>
         <div class="row">
             <?php query_posts(['category_name' => "destaque", 'posts_per_page' => 3]); ?>
-            <?php if (have_posts()): ?>
+            <?php if (have_posts()):the_post() ?>
                 <?php while (have_posts()): the_post(); ?>
                     <div class="col-lg-4 col-sm-6">
                         <div class="single_offer_part">
@@ -169,7 +200,7 @@
                                             <h5 class="card-title"><?php the_title(); ?></h5>
                                         </a>
                                         <p><?php echo limit_words(get_the_content(), 20) ?></p>
-                                       
+
                                     </div>
                                 </div>
                             </div>
