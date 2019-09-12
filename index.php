@@ -6,28 +6,33 @@
         <div class="w-100  align-items-center">
 
             <div id="carrosel" class="carousel " data-ride="carousel">
-                
-               
+
+
                 <div class="carousel-inner">
 
-                    <?php  $i = 1; query_posts(['category_name' => 'destaque', 'post_per_page' => 5]); ?>
+                    <?php
+                    $i = 1;
+                    query_posts(['category_name' => 'destaque', 'post_per_page' => 5]);
+                    ?>
                     <?php
                     if (have_posts()):
                         ?>
                         <?php while (have_posts()): the_post() ?>
                             <div class="carousel-item <?php
-                    if ($i == 1) {
-                        echo 'active';
-                    }
+                            if ($i == 1) {
+                                echo 'active';
+                            }
                             ?>">
-                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="<?php the_permalink();?>" title="<?php the_title();?>"> 
+                                <div class="carousel-caption d-none d-md-block">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> 
                                         <h1><?php the_title(); ?></h1>
                                         <p><?php the_excerpt(); ?></p>
                                     </a>
                                 </div>
-                                 <?php the_post_thumbnail('blog', ['class' => 'img-fluid w-100']); ?>
-                               
+                                <?php if (has_post_thumbnail()):the_post_thumbnail('blog', ['class' => 'img-fluid w-100']); ?>
+                                <?php else: ?>
+                                    <img src="<?php bloginfo('template_url'); ?>/img/post/09.png" class="d-block w-100 img-fluid" alt="<?php the_title(); ?>">
+                                <?php endif; ?>
                             </div>
                             <?php
                             $i++;
@@ -60,83 +65,33 @@
 
 
 
-<section class="service_part section_padding bg-marrom">
+<section class="service_part section_padding  ">
     <div class="container">
+        <div class="section_tittle">
+            <h2>Nossas expertise</h2>
+            <p>Conheça algumas de nossas principais especialidades </p>
+        </div>
         <div class="row align-items-center">
+            
+            <?php for($i=1; $i <=8; $i++):?>
             <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-law"></span>
-                        <h2>Assessoria Civil</h2>
-                        <p> Elaboração e revisão de contratos civil, Renegociação de contratos, Assessoria para a constituição Alteração e dissolução de sociedades empresárias e não empresárias Fundações Associações Cooperativas</p>
+                <div class="single-item ">
+                    <div class="pull-left service-image icons icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="media-body service-content">
+                        <h3><?php the_title(); ?></h3>
+                        <p><?php the_excerpt(5); ?></p>
+                        <div class="features-read-more">
+                            <a class="btn btn_5">Saiba Mais</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-scale"></span>
-                        <h2>Assessoria Trabalhista</h2>
-                        <p>Nosso escritório atua, perante a Justiça do Trabalho de 1ª instância, na defesa trabalhista de seus clientes, bem como perante os diversos Tribunais Regionais do Trabalho, com a elaboração de recursos trabalhistas.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-siren"></span>
-                        <h2>Assessoria tributaria</h2>
-                        <p>Mediante consultoria e planejamento tributários, são repassadas orientações de procedimentos e operações que otimizem a utilização dos instrumentos legais disponíveis, de forma a minimizar os impactos da carga fiscal referente aos tributos federais, estaduais e municipais.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-policeman"></span>
-                        <h2>Assessoria de Conciliação e arbitragem</h2>
-                        <p> Instituto de Conciliação, Mediação e Arbitragem é uma instituição privada, tendo iniciado suas atividades em 2013, busca a prevenção, avaliação, administração e resolução de conflitos, bem como a pacificação</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-policeman"></span>
-                        <h2>Assessoria previdenciaria</h2>
-                        <p>Over their the abund every placed thing them them winged you beginning forth</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-policeman"></span>
-                        <h2>Assessoria eleitoral</h2>
-                        <p>Over their the abund every placed thing them them winged you beginning forth</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-policeman"></span>
-                        <h2>Assessoria Penal</h2>
-                        <p>Over their the abund every placed thing them them winged you beginning forth</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single_service_part">
-                    <div class="single_service_text">
-                        <span class="flaticon-policeman"></span>
-                        <h2>Assessoria Constitucional</h2>
-                        <p>Over their the abund every placed thing them them winged you beginning forth</p>
-                    </div>
-                </div>
-            </div>
+            <?php endfor;?>
+           
+          
+          
 
         </div>
     </div>

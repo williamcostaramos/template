@@ -12,6 +12,7 @@
         <!-- animate CSS -->
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/animate.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&amp;subset=latin" rel="stylesheet" type="text/css">
         <!-- owl carousel CSS -->
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/owl.carousel.min.css">
         <!-- themify CSS -->
@@ -21,6 +22,9 @@
         <!-- font awesome CSS -->
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/magnific-popup.css">
         <!-- swiper CSS -->
+        
+        <script src="https://use.fontawesome.com/debc5f370d.js"></script>
+        
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/slick.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/gijgo.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/nice-select.css">
