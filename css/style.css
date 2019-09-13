@@ -2781,6 +2781,8 @@ ul {
 .service_part {
     position: relative;
     z-index: 1;
+    
+    
 }
 
 /* line 5, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_service.scss */
@@ -2791,7 +2793,7 @@ ul {
     content: "";
     width: 100%;
     height: 100%;
-    background-color:rgba(255,255,255,0.4);
+    background-color:rgb(230,230,210);
     cursor:pointer;
     z-index: -1;
 }
@@ -6630,7 +6632,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .form-control{
-    border: 2px solid #9e9e9e !important;
+    border: 2px solid #fcfcfc !important;
+    background: #fff !important;
     color:#333;
     border-radius: 3px;
 }
@@ -6692,26 +6695,36 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0 40px 0;
 }
 
-.pull-left {
-    float: left !important;
-}
 
 .top{
     
     margin: 150px 0 0 0;
 }
 
-.single-item .fa{
-    margin-right:10px;
-    font-size:1.7em;
+.single-item{
+    
 }
+.single-item .material-icons{
+    margin-right:10px;
+    margin-bottom: 10px;
+    font-size:6.5em;
+    
+        
+}
+
 .service-content{
     font-family: 'Open Sans', sans-serif;
+    
 
 }
+
 .service-content h3{
     font-size: 1.3em;
     margin: 15px;
+}
+.service-content p{
+    margin-bottom: 10px;
+    text-align: justify;
 }
 .service-content h3 a{
     color:#222;
@@ -6730,4 +6743,24 @@ h1, h2, h3, h4, h5, h6 {
     cursor:pointer;
 }
 
+#map{
+    margin-bottom: 20px;
+}
 
+.bg-yellow{
+    background-image:url(../img/servicos/business.png);
+    background-position: center center;
+    background-size:100%;   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 1000px;
+    
+}
+
+/*contato*/
+
+.section_tittle .tagline{
+    color:#fff !important;
+    font-size:3.0em;
+}

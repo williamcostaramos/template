@@ -12,7 +12,7 @@
 
                     <?php
                     $i = 1;
-                    query_posts(['category_name' => 'destaque', 'post_per_page' => 5]);
+                    query_posts(['category_name' => 'destaque', 'posts_per_page' => 5]);
                     ?>
                     <?php
                     if (have_posts()):
@@ -36,6 +36,7 @@
                             </div>
                             <?php
                             $i++;
+                            wp_reset_postdata();
                         endwhile;
                         ?>
                     <?php endif; ?>
@@ -72,26 +73,36 @@
             <p>Conheça algumas de nossas principais especialidades </p>
         </div>
         <div class="row align-items-center">
-            
-            <?php for($i=1; $i <=8; $i++):?>
-            <div class="col-lg-3 col-sm-6 margin-10">
-                <div class="single-item ">
-                    <div class="pull-left service-image icons icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <div class="media-body service-content">
-                        <h3><?php the_title(); ?></h3>
-                        <p><?php the_excerpt(5); ?></p>
-                        <div class="features-read-more">
-                            <a class="btn btn_5">Saiba Mais</a>
+            <?php
+            $servico = new WP_Query(['post_type' => 'post_atuacao', 'posts_per_page' => 6]);
+            if ($servico->have_posts()):
+                ?>
+                <?php while ($servico->have_posts()): $servico->the_post(); ?>    
+
+                    <div class="col-lg-4 col-sm-6 margin-10">
+                        <div class="single-item text-center">
+                            <div class="service-image icons icon">
+                                <i class = "material-icons">
+                                    <?php the_field('icone'); ?>
+                                </i>
+                            </div>
+                            <div class="media-body service-content">
+                                <h3 class="text-center"><?php the_title(); ?></h3>
+                                <p><?php the_excerpt() ?></p>
+                                <div class="features-read-more">
+                                    <a class="btn btn_5 text-left">Saiba Mais</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <?php endfor;?>
-           
-          
-          
+                    <?php
+                    wp_reset_postdata();
+                endwhile;
+                ?>
+            <?php endif; ?>
+
+
+
 
         </div>
     </div>
@@ -166,57 +177,14 @@
     </div>
 </section>
 
-<section class="contact-section section_padding cta_area">
+<section id="contact" class="contact-section section_padding bg-yellow">
     <div class="container">
         <div class="section_tittle">
-            <h2>Entre em contato</h2>
+            <h2 class="tagline">Entre em contato</h2>
         </div>
-        <div class="d-none d-sm-block mb-5 pb-4">
-            <div id="map" style="height: 480px;"></div>
-            <script>
-                function initMap() {
-                    var uluru = {
-                        lat: -10.1825976,
-                        lng: -48.3286589
-                    };
-                    var grayStyles = [{
-                            featureType: "all",
-                            stylers: [{
-                                    saturation: -90
-                                },
-                                {
-                                    lightness: 50
-                                }
-                            ]
-                        },
-                        {
-                            elementType: 'labels.text.fill',
-                            stylers: [{
-                                    color: '#ccdee9'
-                                }]
-                        }
-                    ];
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        center: {
-                            lat: -10.1825976,
-                            lng: -48.3286589
-                        },
-                        zoom: 9,
-                        styles: grayStyles,
-                        scrollwheel: false
-                    });
-                }
-            </script>
-            <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap">
-            </script>
-
-        </div>
-
-
         <div class="row">
 
-            <div class="col-lg-8">
+            <div class="col-sm-6">
                 <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm"
                       novalidate="novalidate">
                     <div class="row">
@@ -250,31 +218,12 @@
                         <button type="submit" class="button button-contactForm btn_4">Enviar Messagem</button>
                     </div>
                 </form>
+
             </div>
-            <div class="col-lg-4">
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-home"></i></span>
-                    <div class="media-body">
-                        <h3>Q. 104 Norte Rua NE 5 </h3>
-                        <h6>Plano Diretor Norte </h6>
-                        <p>Palmas, TO 77006-020</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                    <div class="media-body">
-                        <h3>(63) 3215-5293</h3>
-                        <p>Seg a sexta 8hs às 18hs</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="ti-email"></i></span>
-                    <div class="media-body">
-                        <h3>support@colorlib.com</h3>
-                        <p>Send us your query anytime!</p>
-                    </div>
-                </div>
+            <div class="col-sm-6">
+                <?php require_once 'map.php'; ?>
             </div>
+
         </div>
     </div>
 </section>

@@ -2,20 +2,7 @@
 
 
 <!-- breadcrumb start-->
-<section class="breadcrumb breadcrumb_bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb_iner text-center">
-                    <div class="breadcrumb_iner_item">
-                        <h2>Blog</h2>
-                        <p>Inicio <span>//</span>Blog</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <!-- breadcrumb start-->
 
 <!--================Blog Area =================-->
@@ -28,7 +15,7 @@
                         <?php while (have_posts()): the_post(); ?>
                             <div class="feature-img">
                                 <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail('blog') ?>
+                                    <?php the_post_thumbnail('artigo-blog') ?>
                                 <?php else: ?>
                                     <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/02.png" alt="<?php the_title() ?>"/>                                          
                                 <?php endif; ?>

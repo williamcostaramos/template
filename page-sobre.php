@@ -1,20 +1,7 @@
 <?php /* Template Name:Sobre Nos */ ?>
     <?php get_header();?>
     <!-- breadcrumb start-->
-    <section class="breadcrumb breadcrumb_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb_iner text-center">
-                        <div class="breadcrumb_iner_item">
-                            <h2>Sobre Nós</h2>
-                            <p>Inicio <span>//</span>Sobre Nós</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
     <!-- breadcrumb start-->
 
     <!-- about part start-->

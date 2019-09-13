@@ -1,20 +1,7 @@
 <?php /* Template Name: Serviços*/ ?>
 <?php get_header();?>
     <!-- breadcrumb start-->
-    <section class="breadcrumb breadcrumb_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb_iner text-center">
-                        <div class="breadcrumb_iner_item">
-                            <h2>Nossos Serviços</h2>
-                            <p>Inicio <span>//</span>Serviço</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- breadcrumb start-->
 
 

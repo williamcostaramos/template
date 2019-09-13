@@ -3,22 +3,30 @@
         <div class="row justify-content-between">
             <div class="col-sm-6 col-xl-3">
                 <div class="single-footer-widget footer_1">
-                    <a href="<?php bloginfo('url')?>"> 
-                    
-                         <?php
-                                if (function_exists('the_custom_logo')) {
-                                    the_custom_logo();
-                                }
-                                ?>
-                    
+                    <a href="<?php bloginfo('url') ?>"> 
+
+                        <?php
+                        if (function_exists('the_custom_logo')) {
+                            the_custom_logo();
+                        }
+                        ?>
+
                     </a>
                     <p><?php bloginfo('description') ?> </p>
-                    <div class="social_icon">
-                        <a href="#"> <i class="ti-facebook"></i> </a>
-                        <a href="#"> <i class="ti-twitter-alt"></i> </a>
-                        <a href="#"> <i class="ti-instagram"></i> </a>
-                        <a href="#"> <i class="ti-skype"></i> </a>
-                    </div>
+                    <?php $social = new WP_Query(['post_type' => 'post_social', 'posts_per_page' => 1]); ?>
+                    <?php if ($social->have_posts()): ?>
+
+                        <div class="social_icon">
+                            <?php while ($social->have_posts()): $social->the_post(); ?>
+                                <a href=" <?php the_field('facebook'); ?>" target="_blank"> <i class="ti-facebook"></i> </a>
+                                <a href=" <?php the_field('twitter'); ?>" target="_blank"> <i class="ti-twitter-alt"></i> </a>
+                                <a href=" <?php the_field('instagram'); ?>" target="_blank"> <i class="ti-instagram"></i> </a>
+
+                            <?php endwhile; ?>
+                        </div>
+
+
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3">
@@ -26,7 +34,7 @@
 
 
                     <h4>Nossos Serviços</h4>
-                    <?php query_posts(['post_type' => 'post_atuacao', 'posts_per_page'=> 6]); ?>
+                    <?php query_posts(['post_type' => 'post_atuacao', 'posts_per_page' => 6]); ?>
                     <?php if (have_posts()): ?>
 
                         <ul>
@@ -41,13 +49,18 @@
             </div>
             <div class="col-sm-6 col-xl-3">
                 <div class="single-footer-widget footer_icon">
-                    <h4>Informações de Contato</h4>
-                    <p>Q. 104 Norte Rua NE 5, 38 - Plano Diretor Norte, Palmas, TO</p>
-                    <ul>
-                        <li><a href="#"><i class="ti-mobile"></i>(63) 3215-5293</a></li>
-                        <li><a href="mailto:ariclaw@law.com"><i class="ti-email"></i>seuemail.com.br</a></li>
-                        <li><a href="#"><i class="ti-world"></i> <?php bloginfo('url'); ?></a></li>
-                    </ul>
+                    <?php $contato = new WP_Query(['post_type' => 'post_endereco', 'posts_per_page' => 1]); ?>
+                    <?php if ($contato->have_posts()): ?>
+                        <h4>Informações de Contato</h4>
+                        <?php while ($contato->have_posts()): $contato->the_post(); ?>
+                            <p><?php the_field('endereco')?></p>
+                            <ul>
+                                <li><a href="tel:<?php the_field('telefone')?>"><i class="ti-mobile"></i><?php the_field('telefone')?></a></li>
+                                <li><a href="mailto:<?php the_field('email')?>"><i class="ti-email"></i><?php the_field('email')?></a></li>
+                                <li><a href="<?php the_field('site')?>"><i class="ti-world"></i> <?php the_field('site')?></a></li>
+                            </ul>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
 

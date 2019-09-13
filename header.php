@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/flaticon.css">
         <!-- font awesome CSS -->
         <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/magnific-popup.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <!-- swiper CSS -->
         
         <script src="https://use.fontawesome.com/debc5f370d.js"></script>
@@ -72,7 +74,7 @@
                                     </li>                              
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php bloginfo('url') ?>/contato">Contato</a>
+                                        <a class="nav-link scroll" href="#contact">Contato</a>
                                     </li>
                                 </ul>
                             </div>
