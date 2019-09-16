@@ -1,25 +1,6 @@
 <?php /* Template Name: Blog */ ?>
 <?php get_header(); ?>
 <!-- Header part end-->
-
-<!-- breadcrumb start-->
-<section class="breadcrumb breadcrumb_bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb_iner text-center">
-                    <div class="breadcrumb_iner_item">
-                        <h2>Nosso Blog</h2>
-                        <p>home <span>//</span>Blog</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- breadcrumb start-->
-
-
 <!--================Blog Area =================-->
 <section class="blog_area section_padding">
     <div class="container">
@@ -30,11 +11,12 @@
 
 
                     <article class="blog_item">                       
-                        <?php if (have_posts()): ?>
 
-                            <?php query_posts(['orderby' => 'title']); ?>
 
-                            <?php while (have_posts()): the_post(); ?>
+                        <?php $article = new WP_Query(['post_type' => 'post', 'posts_per_page' => 5]); ?>
+                        <?php if ($article->have_posts()): ?>
+
+                            <?php while ($article->have_posts()): $article->the_post(); ?>
 
 
                                 <div class="blog_item_img">
@@ -56,25 +38,34 @@
                                     </a>
                                     <p><?php echo limit_words(get_the_content(), 30); ?></p>
                                     <ul class="blog-info-link">
-                                        <li><a href="<?php the_permalink(); ?>"><i class="far fa-user"></i> <?php the_author(); ?></a></li>
+                                        <li><a href="<?php the_permalink(); ?>"><i class="fa fa-user"></i> <?php the_author(); ?></a></li>
                                         <li></i><?php echo get_the_time(date("d/m/Y")); ?></li>
                                     </ul>                            
                                 </div>
 
                             <?php endwhile; ?>
-
-                            <?php wp_reset_postdata(); ?>
-                        <?php endif; ?>
+                        <?php else: ?>
+                            <h1>Nada Para exibir aqui</h1>
+                            <?php
+                            wp_reset_postdata();
+                        endif;
+                        ?>
 
 
                     </article>
-                    <?php query_posts(['orderby' => 'title']); ?>
+                    <?php
+                    global $query_string;
+                    parse_str($query_string, $my_query_array);
+                    $paged = ( isset($my_query_array['paged']) && !empty($my_query_array['paged']) ) ? $my_query_array['paged'] : 1;
+                    ?>
+                    <?php $page = new WP_Query(['orderby' => 'title', 'paged' => $paged, 'posts_per_page' => 5]); ?>
                     <nav class="blog-pagination justify-content-center d-flex">
                         <ul class="pagination">
-                            <?php wp_pagenavi(); ?>                                                 
+                            <?php if (function_exists('wp_pagenavi')): ?>
+                                <?php wp_pagenavi(['query' => $page]); ?>
+                            <?php endif; ?>
                         </ul>
                     </nav>
-
                     <?php wp_reset_postdata(); ?>
                 </div>
             </div>

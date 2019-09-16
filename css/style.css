@@ -2412,11 +2412,12 @@ ul {
     /* line 185, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_menu.scss */
     .navbar-brand img {
         max-width: 100px;
-        margin: 0 auto;
+        margin: 20px auto !important;
         position: absolute;
         left: 0;
         right: 0;
         top: 7px;
+        
     }
     /* line 194, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_menu.scss */
     .navbar-light .navbar-toggler {
@@ -6764,3 +6765,20 @@ h1, h2, h3, h4, h5, h6 {
     color:#fff !important;
     font-size:3.0em;
 }
+
+/*footer logo*/
+
+.custom-logo-link img{
+    
+}
+
+.sobre h1, h2, h3{
+    margin: 10px;
+    display: block;
+}
+.sobre p{
+    margin: 10px;
+    line-height: 1.5;
+    font-size:0.875em;
+}
+

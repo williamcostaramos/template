@@ -1,7 +1,7 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-sm-6 col-xl-3">
+            <div class="col-sm-6 col-xl-4">
                 <div class="single-footer-widget footer_1">
                     <a href="<?php bloginfo('url') ?>"> 
 
@@ -12,7 +12,16 @@
                         ?>
 
                     </a>
-                    <p><?php bloginfo('description') ?> </p>
+                    <?php $about = new WP_Query(['post_type' => 'post_sobre', 'posts_per_page' => 1]); ?>
+                    <?php if ($about->have_posts()): ?>
+                        <?php while ($about->have_posts()): $about->the_post() ?>
+                            <p class="text-justify"> <?php limit_words(the_field('breve_descricao'), 5) ?></p>
+                            <?php
+                        endwhile;
+                        wp_reset_postdata();
+                        ?>
+                    <?php endif; ?>
+
                     <?php $social = new WP_Query(['post_type' => 'post_social', 'posts_per_page' => 1]); ?>
                     <?php if ($social->have_posts()): ?>
 
@@ -47,17 +56,17 @@
 
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-3">
+            <div class="col-sm-6 col-xl-4">
                 <div class="single-footer-widget footer_icon">
                     <?php $contato = new WP_Query(['post_type' => 'post_endereco', 'posts_per_page' => 1]); ?>
                     <?php if ($contato->have_posts()): ?>
                         <h4>Informações de Contato</h4>
                         <?php while ($contato->have_posts()): $contato->the_post(); ?>
-                            <p><?php the_field('endereco')?></p>
+                            <p><?php the_field('endereco') ?></p>
                             <ul>
-                                <li><a href="tel:<?php the_field('telefone')?>"><i class="ti-mobile"></i><?php the_field('telefone')?></a></li>
-                                <li><a href="mailto:<?php the_field('email')?>"><i class="ti-email"></i><?php the_field('email')?></a></li>
-                                <li><a href="<?php the_field('site')?>"><i class="ti-world"></i> <?php the_field('site')?></a></li>
+                                <li><a href="tel:<?php the_field('telefone') ?>"><i class="ti-mobile"></i><?php the_field('telefone') ?></a></li>
+                                <li><a href="mailto:<?php the_field('email') ?>"><i class="ti-email"></i><?php the_field('email') ?></a></li>
+                                <li><a href="<?php the_field('site') ?>"><i class="ti-world"></i> <?php the_field('site') ?></a></li>
                             </ul>
                         <?php endwhile; ?>
                     <?php endif; ?>

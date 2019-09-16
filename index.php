@@ -107,30 +107,6 @@
         </div>
     </div>
 </section>
-<!-- Service part end-->
-
-<!-- our_offer part start-->
-
-<!-- our_offer part end-->
-
-<!-- team_part part start-->
-
-<!-- team_part part end-->
-
-<!-- cta_part part start-->
-
-<!-- cta_part part end-->
-
-<!--::review_part start::-->
-<!-- ================ contact section start ================= -->
-
-<!-- ================ contact section end ================= -->
-
-<!-- footer part start-->
-
-<!--::blog_part end::-->
-
-<!-- team_part part start-->
 <section class="blog_part section_padding">
     <div class="container">
         <div class="row justify-content-center">

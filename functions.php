@@ -5,7 +5,7 @@ add_theme_support('post-thumbnails');
 function create_post_type_atuacao() {
     register_post_type('post_atuacao', [
         'labels' => [
-            'name' => "Areas de Atuação",
+            'name' => "Áreas Atuação",
             'singular_name' => "Areas de Atuacao"
         ],
         'public' => true,
@@ -33,8 +33,8 @@ function create_post_type_social() {
 function create_post_type_endereco() {
     register_post_type('post_endereco', [
         'labels' => [
-            'name' => "Contato",
-            'singular_name' => "endereco"
+            'name' => "Endereco/Contato",
+            'singular_name' => "endereco/contato"
         ],
         'public' => true,
         'has_archive' => true,
@@ -44,7 +44,22 @@ function create_post_type_endereco() {
     );
 }
 
+function create_post_type_sobre() {
+    register_post_type('post_sobre', [
+        'labels' => [
+            'name' => "Sobre",
+            'singular_name' => "sobre"
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => "dashicons-edit",
+        'supports' => ['title', 'editor','']
+            ]
+    );
+}
 
+
+add_action('init', 'create_post_type_sobre');
 add_action('init', 'create_post_type_atuacao');
 add_action('init', 'create_post_type_social');
 add_action('init', 'create_post_type_endereco');
@@ -89,7 +104,10 @@ add_image_size('blog', 1600, 720, true);
 add_image_size('the_custom_logo', 64, 64, true);
 
 function excerpt_atuacao($length) {
-    return 30;
+    return 10;
 }
 
 add_filter('excerpt_length', 'excerpt_atuacao');
+
+
+
