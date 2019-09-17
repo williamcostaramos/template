@@ -10,7 +10,7 @@
                 <div class="blog_left_sidebar">
 
 
-                    <article class="blog_item">                       
+                    <article class="blog_item ">                       
 
 
                         <?php $article = new WP_Query(['post_type' => 'post', 'posts_per_page' => 5]); ?>
@@ -23,7 +23,7 @@
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail('capablog') ?>
                                     <?php else: ?>
-                                        <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/02.png" alt="<?php the_title() ?>"/> 
+                                        <img class="img-fluid " src="<?php bloginfo('template_url') ?>/img/blog/02.png" alt="<?php the_title() ?>"/> 
                                     <?php endif; ?>
 
                                     <a href="<?php the_permalink(); ?>" class="blog_item_date">
