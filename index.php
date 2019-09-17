@@ -110,45 +110,46 @@
 <section class="blog_part section_padding">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-7 col-sm-10">
+            <div class="col-lg-6 col-sm-12">
                 <div class="section_tittle">
-                    <h2>Ultimas do Blog</h2>
+                    <h2>Ultimas Publicações</h2>
                     <p>Fique por dentro de todas as novidades do nosso blog </p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <?php query_posts(['category_name' => "destaque", 'posts_per_page' => 3]); ?>
-            <?php if (have_posts()):the_post() ?>
-                <?php while (have_posts()): the_post(); ?>
-                    <div class="col-lg-4 col-sm-6">
+                    <?php $post_blog= new WP_Query(['posts_per_page'=> 3]);?>
+                    <?php if($post_blog->have_posts()):?>
+                    <?php while($post_blog->have_posts()): $post_blog->the_post();?>
+           
+                    <div class="col-lg-4 col-sm-6" >
+                        
                         <div class="single_offer_part">
-
                             <div class="single_offer">
-
-                                <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail('single-post-thumbnail') ?>
-                                <?php else: ?>
-                                    <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/single_blog_2.png" alt="<?php the_title() ?>"/> 
-                                <?php endif; ?>
+                                <?php if( has_post_thumbnail()):  the_post_thumbnail('single-post-thumbnail', 'img-fluid');?>
+                                    <?php else:?>
+                                    <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/01.png" alt="<?php the_title() ?>"/>
+                                    <?php endif;?>
                                 <div class="hover_text">
                                     <div class="single-home-blog">
-                                        <a href="<?php the_permalink(); ?>"> <i class="ti-bookmark"></i> <?php the_category("Sem categoria"); ?></a>
-                                        <a class="time"> <i class="ti-time"></i><?php echo get_the_time('d/m/Y H'); ?>hs</a>
-                                        <a href="<?php the_permalink(); ?>">
-                                            <h5 class="card-title"><?php the_title(); ?></h5>
+                                        <!--pega a categoria-->
+                                        <?php $cat_name = get_the_category(); ?>
+                                        <a href=""> <i class="ti-bookmark"></i> <?php echo $cat_name[0]->name ?></a>
+                                        <a class="time"> <i class="ti-time"></i><?php echo get_the_time('d/m/Y H:i'); ?></a>
+                                        <a href="">
+                                            <h5 class="card-title"> <?php the_title()?></h5>
                                         </a>
-                                        <p><?php echo limit_words(get_the_content(), 20) ?></p>
-
+                                        <p><?php the_excerpt();?></p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                    </div> 
-                <?php endwhile; ?>
-
-            <?php endif; ?>
+                        
+                    </div>
+            <?php endwhile;?>
+            <?php endif;?>
+            
+            
         </div>
     </div>
 </section>
