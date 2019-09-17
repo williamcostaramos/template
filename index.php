@@ -135,7 +135,7 @@
                                         <!--pega a categoria-->
                                         <?php $cat_name = get_the_category(); ?>
                                         <a href=""> <i class="ti-bookmark"></i> <?php echo $cat_name[0]->name ?></a>
-                                        <a class="time"> <i class="ti-time"></i><?php echo get_the_time('d/m/Y H:i'); ?></a>
+                                        <a class="time"> <i class="ti-time"></i><?php echo get_the_time('d/m/Y H:i'); ?>hs</a>
                                         <a href="">
                                             <h5 class="card-title"> <?php the_title()?></h5>
                                         </a>

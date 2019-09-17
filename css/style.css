@@ -2411,7 +2411,7 @@ ul {
     }
     /* line 185, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_menu.scss */
     .navbar-brand img {
-        max-width: 100px;
+        max-width: 200px;
         margin: 20px auto !important;
         position: absolute;
         left: 0;
@@ -2433,7 +2433,7 @@ ul {
 @media (max-width: 575px) {
     /* line 204, ../../01 cl html template/New folder/May 2019/174 Ariclaw Lawyer/Ariclaw Lawyer Html/sass/_menu.scss */
     .navbar-brand img {
-        max-width: 100px;
+        max-width: 200px;
         right: auto;
         left: 0;
         top: 0px;
@@ -6616,8 +6616,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .custom-logo-link > img{
-    max-width: 64px !important;
-    max-height: 64px !important;
+    max-width: 250px !important;
+    max-height: 115px !important;
+    border-radius: 10px;
 }
 
 
