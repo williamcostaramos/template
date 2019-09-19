@@ -54,7 +54,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-4">
+            <div class="col-sm-6 col-xl-4" >
                 <div class="single-footer-widget footer_icon">
                     <?php $contato = new WP_Query(['post_type' => 'post_endereco', 'posts_per_page' => 1]); ?>
                     <?php if ($contato->have_posts()): ?>
