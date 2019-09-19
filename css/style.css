@@ -2256,7 +2256,7 @@ ul {
     top: 0;
     width: 100%;
     z-index: 999;
-    height: 130px;
+    height: 100px;
 
 }
 
@@ -2796,7 +2796,7 @@ ul {
     content: "";
     width: 100%;
     height: 100%;
-    background-color:rgb(230,230,210);
+
     cursor:pointer;
     z-index: -1;
 }
@@ -6619,7 +6619,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-logo-link > img{
     max-width: 250px !important;
-    max-height: 115px !important;
+    max-height: 80px !important;
     border-radius: 10px;
 }
 
@@ -6654,10 +6654,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide{
-    margin-top:130px;
-    margin-bottom: 50px;
     width: 100%;
-
+    max-width: 100%;
 }
 
 .carousel-item{
@@ -6669,7 +6667,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item img{
-    opacity: 0.3 !important;
+    opacity: 0.5 !important;
     width: 100% !important;
     max-width: 100% !important;
     height: 750px !important;
@@ -6678,13 +6676,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-caption {
-    margin-bottom: 25px; 
+    margin-bottom: 125px; 
 }
 .carousel-caption h1{
     font-size:3.4em ! important;
     color:#fff !important;
     font-family: 'Roboto';
-    font-weight: 300;
+    font-weight: 700;
+    text-align: left;
 
 
 
@@ -6692,6 +6691,9 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-caption p{
     color:#bbb;
     font-size:1.5em;
+    max-width: 500px;
+    text-align: left;
+
 }
 
 .single-item {
@@ -6752,13 +6754,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-yellow{
-    background-image:url(../img/servicos/business.png);
-    background-position: center center;
-    background-size:100%;   
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 1000px;
 
 }
 
@@ -6790,32 +6785,32 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         top: -4px;
         left: 0;
-        
+
         margin-bottom:50px;
         vertical-align: middle;
     }
     .slide{
-        margin-top: 150px;
+        margin-top: 100px;
     }
     .navbar-toggler{
         top:20px !important;
     }
-    
+
     .menu_fixed {
-        height: 140px;
+        height: 100px;
         display: none;
     }
 }
 @media(min-width:575px){
-   .main_menu .custom-logo-link img{                
-        
-       display: none;
+    .main_menu .custom-logo-link img{                
+
+        display: none;
     }
-     .menu_fixed {
-        height: 160px !important;
-        }
-    
-    
+    .menu_fixed {
+        height: 100px !important;
+    }
+
+
 
 }
 @media(min-width:1000px){
@@ -6825,4 +6820,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/*carrossel*/
+.carousel-inner{
+    background-color: #000 !important;
+}
 

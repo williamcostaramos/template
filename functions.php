@@ -57,12 +57,26 @@ function create_post_type_sobre() {
             ]
     );
 }
+function create_post_type_color() {
+    register_post_type('post_color', [
+        'labels' => [
+            'name' => "Cores do Site",
+            'singular_name' => "cor"
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => "dashicons-edit",
+        'supports' => ['title']
+            ]
+    );
+}
 
 
 add_action('init', 'create_post_type_sobre');
 add_action('init', 'create_post_type_atuacao');
 add_action('init', 'create_post_type_social');
 add_action('init', 'create_post_type_endereco');
+add_action('init', 'create_post_type_color');
 
 function limit_words($string, $word_limit) {
     $words = explode(' ', $string, ($word_limit + 1));
@@ -101,10 +115,10 @@ add_action('after_setup_theme', 'themename_custom_logo_setup');
 add_image_size('single-post-thumbnail', 350, 450, true);
 add_image_size('artigo-blog', 700, 300, true);
 add_image_size('blog', 1600, 720, true);
-add_image_size('the_custom_logo', 64, 64, true);
+add_image_size('the_custom_logo', 200, 150, true);
 
 function excerpt_atuacao($length) {
-    return 10;
+    return 15;
 }
 
 add_filter('excerpt_length', 'excerpt_atuacao');

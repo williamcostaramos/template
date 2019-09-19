@@ -12,7 +12,7 @@
 
                     <?php
                     $i = 1;
-                    query_posts(['category_name' => 'destaque', 'posts_per_page' => 5]);
+                    query_posts(['category_name' => 'inicio', 'posts_per_page' => 5]);
                     ?>
                     <?php
                     if (have_posts()):
@@ -23,13 +23,13 @@
                                 echo 'active';
                             }
                             ?>">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"> 
+                                <div class="carousel-caption d-none d-md-block ">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" > 
                                         <h1><?php the_title(); ?></h1>
                                         <p><?php the_excerpt(); ?></p>
                                     </a>
                                 </div>
-                                <?php if (has_post_thumbnail()):the_post_thumbnail('blog', ['class' => 'img-fluid w-100']); ?>
+                                <?php if (has_post_thumbnail()):the_post_thumbnail('blog', ['class' => '']); ?>
                                 <?php else: ?>
                                     <img src="<?php bloginfo('template_url'); ?>/img/post/09.png" class="d-block w-100 img-fluid" alt="<?php the_title(); ?>">
                                 <?php endif; ?>
@@ -66,7 +66,7 @@
 
 
 
-<section class="service_part section_padding  ">
+<section class="service_part section_padding color_secondy shadow">
     <div class="container">
         <div class="section_tittle">
             <h2>Nossas expertise</h2>
@@ -107,7 +107,7 @@
         </div>
     </div>
 </section>
-<section class="blog_part section_padding">
+<section class="blog_part section_padding color_third  shadow">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-sm-12">
@@ -118,43 +118,43 @@
             </div>
         </div>
         <div class="row">
-                    <?php $post_blog= new WP_Query(['posts_per_page'=> 3]);?>
-                    <?php if($post_blog->have_posts()):?>
-                    <?php while($post_blog->have_posts()): $post_blog->the_post();?>
-           
+            <?php $post_blog = new WP_Query(['posts_per_page' => 3]); ?>
+            <?php if ($post_blog->have_posts()): ?>
+                <?php while ($post_blog->have_posts()): $post_blog->the_post(); ?>
+
                     <div class="col-lg-4 col-sm-6" >
-                        
+
                         <div class="single_offer_part">
                             <div class="single_offer">
-                                <?php if( has_post_thumbnail()):  the_post_thumbnail('single-post-thumbnail', 'img-fluid');?>
-                                    <?php else:?>
+                                <?php if (has_post_thumbnail()): the_post_thumbnail('single-post-thumbnail', 'img-fluid'); ?>
+                                <?php else: ?>
                                     <img class="img-fluid" src="<?php bloginfo('template_url') ?>/img/blog/01.png" alt="<?php the_title() ?>"/>
-                                    <?php endif;?>
+                                <?php endif; ?>
                                 <div class="hover_text">
                                     <div class="single-home-blog">
                                         <!--pega a categoria-->
                                         <?php $cat_name = get_the_category(); ?>
                                         <a href=""> <i class="ti-bookmark"></i> <?php echo $cat_name[0]->name ?></a>
                                         <a class="time"> <i class="ti-time"></i><?php echo get_the_time('d/m/Y H:i'); ?>hs</a>
-                                        <a href="<?php the_permalink();?>">
-                                            <h5 class="card-title"> <?php the_title()?></h5>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <h5 class="card-title"> <?php the_title() ?></h5>
                                         </a>
-                                        <p><?php the_excerpt();?></p>
+                                        <p><?php the_excerpt(); ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
-            <?php endwhile;?>
-            <?php endif;?>
-            
-            
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+
         </div>
     </div>
 </section>
 
-<section id="contact" class="contact-section section_padding bg-yellow">
+<section id="contact" class="contact-section section_padding color_four">
     <div class="container">
         <div class="section_tittle">
             <h2 class="tagline">Entre em contato</h2>

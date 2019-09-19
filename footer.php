@@ -1,24 +1,22 @@
-<footer class="footer-area">
+<footer class="footer-area color_five shadow">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-sm-6 col-xl-4">
                 <div class="single-footer-widget footer_1">
-                    <a href="<?php bloginfo('url') ?>"> 
-
-                        <?php
-                        if (function_exists('the_custom_logo')) {
-                            the_custom_logo();
-                        }
-                        ?>
-
-                    </a>
                     <?php $about = new WP_Query(['post_type' => 'post_sobre', 'posts_per_page' => 1]); ?>
                     <?php if ($about->have_posts()): ?>
-                        <?php while ($about->have_posts()): $about->the_post() ?>
+                    <?php while ($about->have_posts()): $about->the_post() ?>
+                    <a href="<?php bloginfo('url') ?>"> 
+
+                        <img src="<?php the_field('imagem_institucional');?>" width="150" height="75" title="" />
+
+                    </a>
+                    
+                        
                             <p class="text-justify"> <?php limit_words(the_field('breve_descricao'), 5) ?></p>
                             <?php
                         endwhile;
-                        wp_reset_postdata();
+                        $about->wp_reset_postdata();
                         ?>
                     <?php endif; ?>
 
@@ -31,7 +29,7 @@
                                 <a href=" <?php the_field('twitter'); ?>" target="_blank"> <i class="ti-twitter-alt"></i> </a>
                                 <a href=" <?php the_field('instagram'); ?>" target="_blank"> <i class="ti-instagram"></i> </a>
 
-                            <?php endwhile; ?>
+                            <?php endwhile; $social->wp_reset_postdata();?>
                         </div>
 
 
@@ -43,13 +41,13 @@
 
 
                     <h4>Nossos Serviços</h4>
-                    <?php query_posts(['post_type' => 'post_atuacao', 'posts_per_page' => 6]); ?>
-                    <?php if (have_posts()): ?>
+                    <?php $servico = new WP_Query(['post_type' => 'post_atuacao', 'posts_per_page' => 6]); ?>
+                    <?php if ($servico->have_posts()): ?>
 
                         <ul>
-                            <?php while (have_posts()): the_post(); ?>
+                            <?php while ($servico->have_posts()): $servico->the_post(); ?>
                                 <li><a href="#"><?php the_title() ?></a></li>
-                            <?php endwhile; ?>
+                            <?php endwhile; $servico->wp_reset_postdata();?>
                         </ul>
 
                     <?php endif; ?>
@@ -68,7 +66,7 @@
                                 <li><a href="mailto:<?php the_field('email') ?>"><i class="ti-email"></i><?php the_field('email') ?></a></li>
                                 <li><a href="<?php the_field('site') ?>"><i class="ti-world"></i> <?php the_field('site') ?></a></li>
                             </ul>
-                        <?php endwhile; ?>
+                        <?php endwhile; $contato->wp_reset_postdata();?>
                     <?php endif; ?>
                 </div>
             </div>
