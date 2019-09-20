@@ -81,9 +81,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
-                                <p class="footer-text m-0 text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright <?php bloginfo('name'); ?> &copy;<?php echo date('Y'); ?></script> Todos direitos  reservados
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <p class="footer-text m-0 text-center">Copyright <?php bloginfo('name'); ?> &copy; 2019 - <?php echo date('Y'); ?></script> Todos direitos  reservados
+                                    </p>
                             </div>
 
                         </div>

@@ -6825,3 +6825,33 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #000 !important;
 }
 
+/*page sobre*/
+.box-institutional-image img{
+    vertical-align: middle;
+    
+}
+.text-institutional p{
+    margin-bottom: 30px;
+    border-left: 4px solid #999;
+    padding: 15px;
+    
+    
+    
+}
+.box-philosophy{
+    margin: 30px 0;
+    min-height: 480px !important;
+    
+}
+.institutional-item{
+ min-height: 550px;   
+}
+.institutional-item h2{
+    font-size:1.8em;
+    font-family: 'Roboto'
+}
+
+.institutional-item p{
+    padding: 25px;
+    
+}

@@ -53,7 +53,7 @@ function create_post_type_sobre() {
         'public' => true,
         'has_archive' => true,
         'menu_icon' => "dashicons-edit",
-        'supports' => ['title', 'editor','']
+        'supports' => ['title', 'editor','thumbnail']
             ]
     );
 }

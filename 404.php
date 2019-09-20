@@ -1,25 +1,34 @@
 <?php
-/* 
-Template Name: 404
-*/
+/*
+  Template Name: 404
+ */
 ?>
-<?php get_header();?>
+<?php get_header(); ?>
 
 
-	<div id="primary" class="content-area">
-		<div id="content" class="container " role="main">
+<div class="container-fluid" style="margin: 25px 0;">
+    <div class="error-page-area">
+        <div class="">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="error-page" style="background: url(https://www.radiustheme.com/demo/wordpress/miako/wp-content/themes/miako/assets/img/404.png) no-repeat; height: 500px;">
+                        <h1>404</h1>
+                        <p>Sorry,Page Not Found</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="align-item-center">
+                        <p>The page your are looking for is not available or has been removed. Try going to Home Page by using the buton below</p>
+                        <div class="go-home"> 
+                            <a href="<?php bloginfo('url')?>">Voltar ao Inicio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-			<header class="row">
-				<h1 class="page-title"><?php _e( 'Nada encontrado', '' ); ?></h1>
-			</header>
-
-			
-
-					<?php get_search_form(); ?>
-				
-			
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_footer();?>
+<?php get_footer(); ?>
